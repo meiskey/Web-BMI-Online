@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        nav {
+            background: #ff6f91;
+            color: #fff;
+        }
+
+        nav .menu ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+        }
+
+        nav .menu ul li {
+            margin: 0 15px;
+        }
+
+        nav .menu ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #d5006d;
+        }
+
+        input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background: #ff6f91;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #ff3d73;
+        }
+
+        #result {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        #tips {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #333;
+            background: #ffebee;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        /* New CSS to add space between the image and text */
+        .kolom {
+            padding-left: 20px; /* Adds space between the image and the text */
+        }
+
+        /* Image styling */
+        img {
+            display: block;
+            margin: 0 auto; /* Centers the image */
+            border-radius: 5px;
+            width: 50%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href=''>Kalkulator BMI</a></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Website</a></li>
+                    <li><a href="#produk">Produk Kesehatan</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <!-- untuk home -->
+        <section id="home">
+            <img src="https://img.freepik.com/free-photo/weight-loss-scale-with-centimeter-top-view_1150-42311.jpg?semt=ais_hybrid" alt="Programming Image"/>
+            <div class="kolom">
+                <h2>Yuk Hitung BMI ideal kamu</h2>
+                <p>Masukkan tinggi dan berat badan Anda untuk menghitung BMI Kamu.</p>
+                
+                <input type="number" id="height" placeholder="Tinggi (cm)" required>
+                <input type="number" id="weight" placeholder="Berat (kg)" required>
+                <button onclick="calculateBMI()">Hitung BMI</button>
+
+                <p id="result"></p>
+                <div id="tips"></div>
+            </div>
+        </section>
+
+        <!-- untuk about -->
+        <section id="about">
+            <img src="https://img.freepik.com/free-vector/online-personal-trainer-illustrated_23-2148520428.jpg?semt=ais_hybrid" alt="Programming Image"/>
+            <div class="kolom">
+                <h2>About Website</h2>
+                <p>"Kalkulator BMI ini dirancang untuk membantu Kamu memahami kesehatan tubuh Kamu dengan lebih baik. Dengan menggunakan kalkulator ini, Anda dapat dengan mudah mengetahui apakah berat badan Kamu dalam kategori ideal. Kami juga menyediakan produk kesehatan sesuai permasalahan berat badan kamu."</p>
+            </div>
+        </section>
+
+        <!-- untuk produk kesehatan -->
+        <section id="produk">
+            <img src="https://img.freepik.com/free-photo/colorful-composition-with-healthy-food_23-2147913717.jpg?semt=ais_hybrid" alt="Programming Image"/>
+            <div class="kolom">
+                <h2>Produk Kesehatan</h2>
+                <p>Kami menyediakan berbagai produk kesehatan yang dapat membantu kamu dalam menjaga berat badan Ideal. Dapatkan informasi lebih lanjut tentang produk kami di sini.</p>
+                <p><a href="https://id.shp.ee/H5oVZYq" class="tbl-biru" target="_blank">Kunjungi Toko Kami</a></p>
+            </div>
+        </section>
+    </div>
+
+    <div id="contact">
+        <div class="wrapper">
+            <div class="footer">
+                <div class="footer-section">
+                    <h3>Kalkulator BMI</h3>
+                    <p>"Ketahui berat badan ideal kamu sekarang, dan cari solusi terbaik!"</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Address</h3>
+                    <p>Jl. Menukan No.1002</p>
+                    <p>Kode Pos: 55153</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Social Media</h3>
+                    <p><b>Admin 1: </b><a href="https://www.instagram.com/meiskey_26/profilecard/?igsh=MTBhbDh3NnA4eDc3Ng==" target="_blank" style="color: #ff6f91; text-decoration: none;">Meiskey Naomy</a></p>
+                    <p><b>Admin 2: </b><a href="https://www.instagram.com/emiliana_20_08?igsh=MW42OWQ1eTh2N2ttZQ==" target="_blank" style="color: #ff6f91; text-decoration: none;">Emiliana Nona</a></p>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+    <div id="copyright">
+        <div class="wrapper">
+            &copy; 2024. <b>Proyek Perangkat Lunak</b>. STMIK EL RAHMA YOGYAKARTA.
+        </div>
+    </div>
+
+    <script>
+        function calculateBMI() {
+            const height = parseFloat(document.getElementById("height").value) / 100; // Convert cm to meters
+            const weight = parseFloat(document.getElementById("weight").value);
+            const bmi = weight / (height * height);
+            const result = document.getElementById("result");
+            const tips = document.getElementById("tips");
+
+            if (isNaN(bmi) || weight <= 0 || height <= 0) {
+                result.textContent = "Silakan masukkan data yang valid.";
+                tips.textContent = "";
+                return;
+            }
+
+            let category = "";
+            let tipsText = "";
+
+            if (bmi < 18.5) {
+                category = "Kurus";
+                tipsText = "Tips: Makan lebih banyak kalori, fokus pada makanan bergizi dan konsultasikan dengan ahli gizi.";
+            } else if (bmi >= 18.5 && bmi < 24.9) {
+                category = "Normal";
+                tipsText = "Tips: Pertahankan pola makan seimbang dan rutin berolahraga.";
+            } else if (bmi >= 25 && bmi < 29.9) {
+                category = "Gemuk";
+                tipsText = "Tips: Perhatikan asupan kalori, tingkatkan aktivitas fisik.";
+            } else {
+                category = "Obesitas";
+                tipsText = "Tips: Konsultasikan dengan dokter atau ahli gizi untuk rencana penurunan berat badan.";
+            }
+
+            result.textContent = `BMI Anda adalah: ${bmi.toFixed(2)} (${category})`;
+            tips.textContent = tipsText;
+        }
+    </script>
+    
+</body>
+</html>
